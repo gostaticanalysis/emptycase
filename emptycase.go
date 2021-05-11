@@ -8,7 +8,7 @@ import (
 	"golang.org/x/tools/go/ast/inspector"
 )
 
-const doc = "emptycase is ..."
+const doc = "emptycase find empty cases"
 
 // Analyzer is ...
 var Analyzer = &analysis.Analyzer{
