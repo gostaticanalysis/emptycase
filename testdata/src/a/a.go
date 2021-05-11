@@ -10,3 +10,13 @@ func f() {
 		fmt.Println("case 2")
 	}
 }
+
+func g() {
+	ch := make(chan int)
+
+	select {
+	case <-ch: // want "empty case"
+	default:
+		fmt.Println("no value")
+	}
+}

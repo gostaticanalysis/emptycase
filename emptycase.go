@@ -24,14 +24,19 @@ func run(pass *analysis.Pass) (interface{}, error) {
 	inspect := pass.ResultOf[inspect.Analyzer].(*inspector.Inspector)
 
 	nodeFilter := []ast.Node{
-		(*ast.Ident)(nil),
+		(*ast.CaseClause)(nil),
+		(*ast.CommClause)(nil),
 	}
 
 	inspect.Preorder(nodeFilter, func(n ast.Node) {
 		switch n := n.(type) {
-		case *ast.Ident:
-			if n.Name == "gopher" {
-				pass.Reportf(n.Pos(), "identifier is gopher")
+		case *ast.CaseClause:
+			if len(n.Body) == 0 {
+				pass.Reportf(n.Pos(), "empty case")
+			}
+		case *ast.CommClause:
+			if len(n.Body) == 0 {
+				pass.Reportf(n.Pos(), "empty case")
 			}
 		}
 	})
