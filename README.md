@@ -1,5 +1,9 @@
 # emptycase
 
+[![Go Documentation](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)]()
+[![Test](https://github.com/gostaticanalysis/emptycase/actions/workflows/go.yml/badge.svg)](https://github.com/gostaticanalysis/emptycase/actions/workflows/go.yml)
+
+
 Analyzer: emptycase finds case statements with no body
 
 ## Intall
