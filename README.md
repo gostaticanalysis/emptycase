@@ -2,6 +2,21 @@
 
 Analyzer: emptycase finds case statements with no body
 
+## Intall
+
+```bash
+$ go get github.com/gostaticanalysis/emptycase/cmd/emptycase
+```
+
+
+## Usage
+
+```bash
+$ go vet -vettool=`which emptycase` pkgname
+```
+
+## Motivation
+
 It is common knowledge for gopher that there is no fall through in the switch-case statement of the Go language.
 However, people who are used to C or Java may inadvertently write code like the following.
 
