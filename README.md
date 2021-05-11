@@ -1,6 +1,6 @@
 # emptycase
 
-[![Go Documentation](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)]()
+[![Go Documentation](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](https://pkg.go.dev/github.com/gostaticanalysis/emptycase)
 [![Test](https://github.com/gostaticanalysis/emptycase/actions/workflows/go.yml/badge.svg)](https://github.com/gostaticanalysis/emptycase/actions/workflows/go.yml)
 
 
