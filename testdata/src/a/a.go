@@ -1,7 +1,12 @@
 package a
 
+import "fmt"
+
 func f() {
-	// The pattern can be written in regular expression.
-	var gopher int // want "pattern"
-	print(gopher)  // want "identifier is gopher"
+	v := 1
+	switch v {
+	case 1: // want "empty case"
+	case 2:
+		fmt.Println("case 2")
+	}
 }
