@@ -5,9 +5,9 @@
 package main
 
 import (
+	"github.com/gostaticanalysis/emptycase"
 	"strings"
 
-	"emptycase"
 	"golang.org/x/tools/go/analysis"
 )
 

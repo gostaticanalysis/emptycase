@@ -1,7 +1,7 @@
 package main
 
 import (
-	"emptycase"
+	"github.com/gostaticanalysis/emptycase"
 	"golang.org/x/tools/go/analysis/unitchecker"
 )
 

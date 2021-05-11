@@ -1,4 +1,4 @@
-module emptycase
+module github.com/gostaticanalysis/emptycase
 
 go 1.16
 

@@ -1,9 +1,9 @@
 package emptycase_test
 
 import (
+	"github.com/gostaticanalysis/emptycase"
 	"testing"
 
-	"emptycase"
 	"github.com/gostaticanalysis/testutil"
 	"golang.org/x/tools/go/analysis/analysistest"
 )
