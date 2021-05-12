@@ -6,10 +6,11 @@ func f() {
 	v := 1
 	switch v {
 	case 1: // want "empty case"
-	case 2:
+	case 2: // Intentional empty case. Not treated as an error.
+	case 3:
 		// Intentional empty case. Not treated as an error.
 
-	case 3:
+	case 4:
 		fmt.Println("execute")
 	}
 }
