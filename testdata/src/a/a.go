@@ -7,7 +7,10 @@ func f() {
 	switch v {
 	case 1: // want "empty case"
 	case 2:
-		fmt.Println("case 2")
+		// Intentional empty case. Not treated as an error.
+
+	case 3:
+		fmt.Println("execute")
 	}
 }
 
@@ -17,6 +20,6 @@ func g() {
 	select {
 	case <-ch: // want "empty case"
 	default:
-		fmt.Println("no value")
+		fmt.Println("execute")
 	}
 }

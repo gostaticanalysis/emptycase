@@ -30,7 +30,7 @@ func f() {
 	switch v {
 	case 1:
 	case 2:
-		fmt.Println("case 1 or 2")
+		fmt.Println("execute")
 	}
 }
 ```
@@ -39,3 +39,24 @@ Of course, Println() donesn't be executed.
 However, it takes a while to realize this when you write it.
 
 This Analyzer detects empty cases, making it faster to notice problems.
+
+## Ignore intentional empty cases
+
+Sometimes an empty case is written to indicate that nothing is to be processed on purpose.
+This Analyzer ignores empty cases that have comments.
+
+```go
+func f() {
+	v := 1
+	switch v {
+	case 1: // This is an intentionally empty case.
+	case 2:
+		// This is an intentionally empty case.
+		// If you want to write a comment on a different line from the case statement, you need to put a blank line between it and the next case statement.
+		
+	case 3:
+		fmt.Println("execute")
+	}
+}
+
+```
