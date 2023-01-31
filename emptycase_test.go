@@ -10,6 +10,5 @@ import (
 // TestAnalyzer is a analyzerTest for Analyzer.
 func TestAnalyzer(t *testing.T) {
 	testdata := testutil.WithModules(t, analysistest.TestData(), nil)
-	analyzerTest = true
-	analysistest.Run(t, testdata, Analyzer, "a")
+	analysistest.Run(t, testdata, AnalyzerForTesting, "a")
 }
